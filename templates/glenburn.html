@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/glenburn.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Poppins:wght@100;200&display=swap" rel="stylesheet">
+    <title>Tea</title>
+</head>
+<body>
+  <div class="container">
+      <div class="row mt-3">
+          {% for item in items %}
+          <div class="col-12">
+              <div class="card mb-4">
+                  <div class="row g-0">
+                    <div class="col-md-6 cover">
+                      <img class="logo" src="/static/imgs/glenburn-logo.png" alt="Logo">
+                      <p class= "header-text">
+                        From this majestic Darjeeling tea garden comes the Champagne of Indian tea,
+                        infused with pure mountain air.
+                      </p>
+                      <img src="{{item.image}}" class="rounded-start card-image" alt="{{item.title}}">
+                    </div>
+                    <div class="col-md-6">
+                      <div class="card-body text-center">
+                        <p class="card-text heading">
+                          One of the most acclaimed green tea maufacturers, bringing superior quality tea to pamper your taste buds.     
+                        </p>
+                        <h4 class="card-title text-center item-title">{{item.title}}</h4>
+                        <!-- <p class="card-text text-center">{{item.weight}}</p> -->
+                        <p class="card-text">50gm</p>
+                        <p class="card-text">{{item.description}}</p>
+                        {% for i in item.description2.split('.') %}
+                        <p class="card-text description">{{i}}.</p>
+                        {% endfor %}
+                        <p class="card-text">{{item.ingredients}}</p>
+                        <h6 class="card-text item-price">Rs {{item.price}}</h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          </div>
+          {% endfor %}
+      </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

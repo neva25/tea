@@ -1,0 +1,32 @@
+body {
+    background-color: rgb(101, 179, 107)!important;
+}
+
+.card {
+    background-color: #D3FFD8!important;
+}
+
+.logo {
+    position: absolute;
+    left: 480px;
+    top: 60px;
+}
+
+.heading1 {
+    margin-top: 50px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.heading {
+    font-size: 18px;
+    text-align: center;
+}
+
+.item-title {
+    margin-top: 130px;
+}
+
+.item-price {
+    margin-top: 80px;
+}

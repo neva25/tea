@@ -1,0 +1,55 @@
+body {
+    background-color: #bddcbd!important;
+}
+
+.card {
+    height: 700px;
+    background: #FFFEEB!important;
+}
+
+.row {
+    height: 100%;
+}
+
+.logo {
+    position: absolute;
+    top: 30px;
+    left: 260px;
+}
+
+.logo2 {
+    position: absolute;
+    top: 30px;
+    right: 260px;
+}
+
+.cover-image {
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+    max-width: 100%;
+}
+
+.card-image {
+    height: 400px!important;
+    position: absolute;
+    top: 200px;
+    left: 182px;
+}
+
+.heading1 {
+    margin-top: 100px;
+    margin-bottom: 0px;
+}
+
+.heading {
+    font-size: 17px;
+}
+
+.item-title {
+    margin-top: 120px;
+}
+
+.item-price {
+    margin-top: 100px;
+}

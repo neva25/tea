@@ -30,3 +30,31 @@ body {
 .item-price {
     margin-top: 80px;
 }
+
+.tdt-logo {
+    mix-blend-mode: multiply;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+}
+
+.header-text {
+    font-weight: bold!important;
+    margin-bottom: 50px;
+}
+
+.header-title {
+    font-family: 'Bodoni Moda', serif;
+    margin-bottom: 60px;
+}
+
+.header {
+    margin-top: 60px;
+}
+
+.header-desc {
+    margin-left: 120px;
+    margin-right: 120px;
+    margin-bottom: 60px!important;
+}

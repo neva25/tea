@@ -59,3 +59,23 @@ body {
 .premium {
     font-weight: bold;
 }
+
+.header-image {
+    width: 400px;
+    margin-left: 420px;
+}
+
+.header {
+    background: url('/static/imgs/glenburn-bg.jpg') center no-repeat;
+    background-size: 1300px;
+    filter: brightness(0.9);
+    font-weight: 500;
+}
+
+.header-title {
+    margin-top: 50px;
+}
+
+.header-desc {
+    margin-top: 100px;
+}

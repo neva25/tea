@@ -4,11 +4,9 @@ body {
 
 .card {
     height: 700px;
-    /* background-color: #ffd7d0!important; */
 }
 
 .card-body {
-    /* background: url("/static/imgs/glenburn-left.jpg") center no-repeat; */
     height: 100%;
 }
 
@@ -41,19 +39,23 @@ body {
 }
 
 .heading {
-    font-size: 20px;
+    font-size: 22px;
     font-family: 'Pinyon Script', cursive;
     margin-top: 25px;
 }
 
 .item-title {
-    margin-top: 120px;
-}
-
-.item-price {
     margin-top: 100px;
 }
 
+.item-price {
+    margin-top: 80px;
+}
+
 .description {
-    margin: 0;
+    margin-top: 40px;
+}
+
+.premium {
+    font-weight: bold;
 }

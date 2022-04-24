@@ -27,19 +27,18 @@
                       <img src="{{item.image}}" class="rounded-start card-image" alt="{{item.title}}">
                     </div>
                     <div class="col-md-6">
-                      <div class="card-body text-center">
-                        <p class="card-text heading">
+                      <div class="card-body">
+                        <p class="card-text heading text-center">
                           One of the most acclaimed green tea maufacturers, bringing superior quality tea to pamper your taste buds.     
                         </p>
-                        <h4 class="card-title text-center item-title">{{item.title}}</h4>
-                        <!-- <p class="card-text text-center">{{item.weight}}</p> -->
-                        <p class="card-text">50gm</p>
-                        <p class="card-text">{{item.description}}</p>
-                        {% for i in item.description2.split('.') %}
-                        <p class="card-text description">{{i}}.</p>
-                        {% endfor %}
-                        <p class="card-text">{{item.ingredients}}</p>
-                        <h6 class="card-text item-price">Rs {{item.price}}</h6>
+                        <h4 class="card-title item-title text-center">{{item.title}}</h4>
+                        {% if item.premium %}
+                        <p class="card-text text-center premium">({{item.special}})</p>
+                        {% endif %}
+                        <p class="card-text text-center">{{item.weight}}</p>
+                        <p class="card-text text-center">{{item.description}}</p>
+                        <p class="card-text description">{{item.description2}}</p>
+                        <h6 class="card-text item-price text-center">Rs {{item.price}}</h6>
                       </div>
                     </div>
                   </div>

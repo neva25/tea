@@ -29,6 +29,14 @@ def tata():
     return render_template('tata.html', items=items)
 
 
+@app.route("/spice")
+def spice():
+    df = pd.read_csv("data/spice.csv", index_col=0)
+    df = df.fillna(0)
+    items = df.to_dict('records')
+    return render_template('spice.html', items=items)
+
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=5001)
 

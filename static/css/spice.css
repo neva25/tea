@@ -1,0 +1,64 @@
+.header-img {
+    width: 100%;
+}
+
+body {
+    background-color: rgb(101, 179, 107)!important;
+}
+
+.card {
+    background-color: #D3FFD8!important;
+}
+
+.logo {
+    position: absolute;
+    left: 480px;
+    top: 60px;
+}
+
+.heading1 {
+    margin-top: 50px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.heading {
+    font-size: 18px;
+    text-align: center;
+}
+
+.item-title {
+    margin-top: 130px;
+}
+
+.item-price {
+    margin-top: 80px;
+}
+
+.tdt-logo {
+    mix-blend-mode: multiply;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+}
+
+.header-text {
+    font-weight: bold!important;
+    margin-bottom: 50px;
+}
+
+.header-title {
+    font-family: 'Bodoni Moda', serif;
+    margin-bottom: 60px;
+}
+
+.header {
+    margin-top: 60px;
+}
+
+.header-desc {
+    margin-left: 120px;
+    margin-right: 120px;
+    margin-bottom: 60px!important;
+}

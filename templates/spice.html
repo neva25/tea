@@ -17,17 +17,22 @@
             <div class="col-12">
               <div class="card mb-4">
                   <div class="card-body header">
-                    <img class="tdt-logo" src="/static/imgs/weaveskart-logo.png" alt="">
-                    <img src="/static/imgs/spice_bg.png" alt="" class="header-img">
+                    <img class="weave-logo" src="/static/imgs/weaveskart-logo.png" alt="">
                     <h4 class="card-title text-center header-title">Weaveskart</h4>
-                    <p class="text-center header-text">Changing perceptions of tea, one sip at a time.</p>
-                    <p class="card-text header-desc text-center">
-                      Tasse De The'  brings in a culture that celebrates the art of drinking tea, aiming at transforming the way you drink tea,
-                      one cup at a time, by bringing  tasty and high-quality tea to suit every palate. 
-                      The TDT inventory boasts of 300 teas, including Oolong from Taiwan, Green from China & Japan, Black from Darjeeling & Ceylon, 
-                      Rooibos from South Africa, herbs from Vietnam and other varieties such as White, Pu'erh, Iced, Fruit, Designer and Art Teas from different parts
-                      of the world. The collection also includes never tasted before blends created by our ITMA certified tea blender, steeping pots of new flavour combinations ones to achieve perfection.
-                      Part of the sale proceeds go to the underprivilegd women of India.
+                    <img src="/static/imgs/spice_bg.png" alt="" class="header-img">
+                    <p class="header-desc text-center">
+                      LAW India (looms & weaves) is a woman owned social enterprise, started in 2013.
+                      Our goal of ensuring safe food to the citizens of the country led us to start few initiatives for pesticide free and chemical free natural food. 
+                      We then slowly moved to organize organic and fair trade farmers from different parts of the country, especially women famers. 
+                      We envision a future where environmentally and socially responsible ethical business of organic and handcrafted products of excellence.
+                      To cater to the needs of the downtrodden by generating employment and adding value to the handcrafted wares created by rural women and the farming
+                       community
+                      To promote sustainable agriculture ground on permaculture
+                      To share a part of our profits to support the poor and marginalized people in the society. as well as for environmental sustainability.
+                      We offer world-class, ethically sourced, organic, natural and handcrafted products to the socially empowered customers.
+                      We put the health and wellbeing of our patrons or social investors as our first priority, striving to create a healthier India free from illnesses.
+                      We help small businesswomen earn a living, making them economically independent. 
+                      LAW, India promotes a permaculture based small socio- ecological system
                     </p>
                   </div>
               </div>
@@ -38,33 +43,35 @@
             <div class="col-12">
                 <div class="card mb-4">
                     <div class="row g-0">
-                      <div class="col-md-6">
-                        <img class="logo" src="/static/imgs/logo.png" alt="Logo">
-                        <img src="{{item.image}}" class="img-fluid rounded-start" alt="{{item.title}}">
+                      <div class="col-md-4">
+                        <img class="logo" src="/static/imgs/weaveskart-logo.png" alt="Logo">
+                        <p class="logo-text">Looms and Weaves</p>
+                        <img src="{{item.image}}" class="img-fluid rounded-start card-image" alt="{{item.title}}">
                       </div>
-                      <div class="col-md-6">
+                      <div class="col-md-8">
                         <div class="card-body">
-                          <p class="card-text heading heading1">
-                            Premium tea sourced directly from the plantations of the finest tea belt regions worldwide.
-                          </p>
                           <p class="card-text heading">
-                            Thirty years of just mastering tea making. 
+                            Empowering women farmers in rural india. Ethically sourced and organically produced.
                           </p>
-                          <h4 class="card-title text-center item-title">{{item.title}}</h4>
-                          {% if item.weight %}
-                          <p class="card-text text-center">{{item.weight}}</p>
-                          {% endif %}
-                          {% if item.ingredients %}
-                          <p class="card-text text-center">
-                            {{item.ingredients}}
-                          </p>
-                          {% endif %}
-                          {% if item.health %}
-                          <p class="card-text text-center">
-                            Health Benefits: {{item.health}}
-                          </p>
-                          {% endif %}
-                          <h6 class="card-text text-center item-price">{{item.price}}</h6>
+                          <h6 class="card-title text-center item-title">{{item.title}}</h6>
+                          <p class="card-text text-center">{{item.features}}</p>
+                          <div class="price-container">
+                            {% if item["50"] %}
+                              <span class="price-text">50G-{{item["50"]}}</span>
+                            {% endif %}
+                            {% if item["100"] %}
+                              <span class="price-text">100G-{{item["100"]}}</span>
+                            {% endif %}
+                            {% if item["200"] %}
+                              <span class="price-text">200G-{{item["200"]}}</span>
+                            {% endif %}
+                            {% if item["250"] %}
+                              <span class="price-text">250G-{{item["250"]}}</span>
+                            {% endif %}
+                            {% if item["500"] %}
+                              <span class="price-text">500G-{{item["500"]}}</span>
+                            {% endif %}
+                          </div>
                         </div>
                       </div>
                     </div>

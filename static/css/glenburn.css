@@ -38,6 +38,21 @@ body {
     left: 130px;
 }
 
+.card-image-left {
+    height: 65%;
+    position: absolute;
+    bottom: 30px;
+    left: 0px;
+}
+
+.card-image-right {
+    height: 50%;
+    position: absolute;
+    bottom: 55px;
+    left: 300px;
+    mix-blend-mode: multiply;
+}
+
 .heading {
     font-size: 22px;
     font-family: 'Pinyon Script', cursive;

@@ -38,7 +38,7 @@
         </div>
       </div>
       <div class="row mt-3">
-          {% for item in items %}
+          {% for item in items[:18] %}
           <div class="col-12">
               <div class="card mb-4">
                   <div class="row g-0">
@@ -59,7 +59,39 @@
                         {% if item.premium %}
                         <p class="card-text text-center premium">({{item.special}})</p>
                         {% endif %}
-                        <p class="card-text text-center">{{item.weight}}</p>
+                        <p class="card-text text-center">{{item.description}}</p>
+                        <p class="card-text description">{{item.description2}}</p>
+                        <h6 class="card-text item-price text-center">Rs {{item.price}}</h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          </div>
+          {% endfor %}
+          {% for item in items[18:] %}
+          <div class="col-12">
+              <div class="card mb-4">
+                  <div class="row g-0">
+                    <div class="col-md-6 cover">
+                      <img class="logo" src="/static/imgs/glenburn-logo.png" alt="Logo">
+                      <p class= "header-text">
+                        From this majestic Darjeeling tea garden comes the Champagne of Indian tea,
+                        infused with pure mountain air.
+                      </p>
+                      <div>
+                        <img src="{{item.image}}" class="rounded-start card-image-left" alt="{{item.title}}">
+                        <img src="/static/imgs/glenburn/{{item.image2}}" class="rounded-start card-image-right" alt="{{item.title}}">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="card-body">
+                        <p class="card-text heading text-center">
+                          One of the most acclaimed green tea maufacturers, bringing superior quality tea to pamper your taste buds.     
+                        </p>
+                        <h4 class="card-title item-title text-center">{{item.title}}</h4>
+                        {% if item.premium %}
+                        <p class="card-text text-center premium">({{item.special}})</p>
+                        {% endif %}
                         <p class="card-text text-center">{{item.description}}</p>
                         <p class="card-text description">{{item.description2}}</p>
                         <h6 class="card-text item-price text-center">Rs {{item.price}}</h6>

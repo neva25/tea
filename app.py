@@ -15,7 +15,7 @@ def index():
 
 @app.route("/glenburn")
 def glenburn():
-    df = pd.read_csv("data/glenburn.csv", encoding= 'unicode_escape')
+    df = pd.read_csv("data/glenburn-tea.csv", encoding= 'unicode_escape')
     df = df.fillna(0)
     items = df.to_dict('records')
     return render_template('glenburn.html', items=items)

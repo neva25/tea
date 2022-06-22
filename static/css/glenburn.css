@@ -48,7 +48,7 @@ body {
 .card-image-right {
     height: 50%;
     position: absolute;
-    bottom: 55px;
+    bottom: 50px;
     left: 300px;
     mix-blend-mode: multiply;
 }
@@ -67,12 +67,18 @@ body {
     margin-top: 80px;
 }
 
-.description {
-    margin-top: 40px;
+.price-list {
+    text-align: center;
+    font-weight: 500;
+    margin-top: 80px;
 }
 
-.premium {
-    font-weight: bold;
+.price {
+    margin: 0;
+}
+
+.description {
+    margin-top: 40px;
 }
 
 .header-image {
@@ -97,4 +103,10 @@ body {
 
 .header-desc {
     margin-top: 80px;
+}
+
+.page-number {
+    position: absolute;
+    bottom: 20px;
+    right: 50px;
 }

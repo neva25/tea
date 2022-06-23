@@ -40,126 +40,125 @@
       <div class="row mt-3">
           {% for item in items[:24] %}
           <div class="col-12">
-              <div class="card mb-4">
-                  <div class="row g-0">
-                    <div class="col-md-6 cover">
-                      <img class="logo" src="/static/imgs/glenburn-logo.png" alt="Logo">
-                      <p class= "header-text">
-                        From this majestic Darjeeling tea garden comes the Champagne of Indian tea,
-                        infused with pure mountain air.
+            <div class="card mb-4">
+                <div class="row g-0">
+                  <div class="col-md-6 cover">
+                    <img class="logo" src="/static/imgs/glenburn-logo.png" alt="Logo">
+                    <p class= "header-text">
+                      From this majestic Darjeeling tea garden comes the Champagne of Indian tea,
+                      infused with pure mountain air.
+                    </p>
+                    <img src="{{item.image}}" class="rounded-start card-image" alt="{{item.title}}">
+                  </div>
+                  <div class="col-md-6">
+                    <div class="card-body">
+                      <p class="card-text heading text-center">
+                        One of the most acclaimed green tea maufacturers, bringing superior quality tea to pamper your taste buds.     
                       </p>
-                      <img src="{{item.image}}" class="rounded-start card-image" alt="{{item.title}}">
-                    </div>
-                    <div class="col-md-6">
-                      <div class="card-body">
-                        <p class="card-text heading text-center">
-                          One of the most acclaimed green tea maufacturers, bringing superior quality tea to pamper your taste buds.     
+                      <h4 class="card-title item-title text-center">{{item.title}}</h4>
+                      <p class="card-text text-center">{{item.description}}</p>
+                      {% if item.description2 %}
+                      <p class="card-text description">{{item.description2}}</p>
+                      {% endif %}
+                      <div class="price-list">
+                        {% if item.price %}
+                        <p class="price">
+                          {{item.price}}
                         </p>
-                        <h4 class="card-title item-title text-center">{{item.title}}</h4>
-                        <p class="card-text text-center">{{item.description}}</p>
-                        {% if item.description2 %}
-                        <p class="card-text description">{{item.description2}}</p>
                         {% endif %}
-                        <div class="price-list">
-                          {% if item.price %}
-                          <p class="price">
-                            {{item.price}}
-                          </p>
-                          {% endif %}
-                          {% if item["50g tin"] %}
-                          <p class="price">
-                            50g tin: {{item["50g tin"]}}
-                          </p>
-                          {% endif %}
-                          {% if item["100g tin"] %}
-                          <p class="price">
-                            100g tin: {{item["100g tin"]}}
-                          </p>
-                          {% endif %}
-                          {% if item["50g pouch"] %}
-                          <p class="price">
-                            50g pouch: {{item["50g pouch"]}}
-                          </p>
-                          {% endif %}
-                          {% if item["100g pouch"] %}
-                          <p class="price">
-                            100g pouch: {{item["100g pouch"]}}
-                          </p>
-                          {% endif %}         
-                          {% if item["1Kg pouch"] %}
-                          <p class="price">
-                            1kg pouch: {{item["1Kg pouch"]}}
-                          </p>
-                          {% endif %}
-                        </div>
-                        <!-- <p class="page-number">{{loop.index}}</p> -->
+                        {% if item["50g tin"] %}
+                        <p class="price">
+                          50g tin: {{item["50g tin"]}}
+                        </p>
+                        {% endif %}
+                        {% if item["100g tin"] %}
+                        <p class="price">
+                          100g tin: {{item["100g tin"]}}
+                        </p>
+                        {% endif %}
+                        {% if item["50g pouch"] %}
+                        <p class="price">
+                          50g pouch: {{item["50g pouch"]}}
+                        </p>
+                        {% endif %}
+                        {% if item["100g pouch"] %}
+                        <p class="price">
+                          100g pouch: {{item["100g pouch"]}}
+                        </p>
+                        {% endif %}         
+                        {% if item["1Kg pouch"] %}
+                        <p class="price">
+                          1kg pouch: {{item["1Kg pouch"]}}
+                        </p>
+                        {% endif %}
                       </div>
                     </div>
                   </div>
                 </div>
+              </div>
           </div>
           {% endfor %}
           {% for item in items[24:] %}
           <div class="col-12">
-              <div class="card mb-4">
-                  <div class="row g-0">
-                    <div class="col-md-6 cover">
-                      <img class="logo" src="/static/imgs/glenburn-logo.png" alt="Logo">
-                      <p class= "header-text">
-                        From this majestic Darjeeling tea garden comes the Champagne of Indian tea,
-                        infused with pure mountain air.
-                      </p>
-                      <div>
-                        <img src="{{item.image}}" class="rounded-start card-image-left" alt="{{item.title}}">
-                        <img src="/static/imgs/glenburn/{{item.image2}}" class="rounded-start card-image-right" alt="{{item.title}}">
-                      </div>
+            <div class="card mb-4">
+                <div class="row g-0">
+                  <div class="col-md-6 cover">
+                    <img class="logo" src="/static/imgs/glenburn-logo.png" alt="Logo">
+                    <p class= "header-text">
+                      From this majestic Darjeeling tea garden comes the Champagne of Indian tea,
+                      infused with pure mountain air.
+                    </p>
+                    <div>
+                      <img src="{{item.image}}" class="rounded-start card-image-left" alt="{{item.title}}">
+                      <img src="/static/imgs/glenburn/{{item.image2}}" class="rounded-start card-image-right" alt="{{item.title}}">
                     </div>
-                    <div class="col-md-6">
-                      <div class="card-body">
-                        <p class="card-text heading text-center">
-                          One of the most acclaimed green tea maufacturers, bringing superior quality tea to pamper your taste buds.     
+                  </div>
+                  <div class="col-md-6">
+                    <div class="card-body">
+                      <p class="card-text heading text-center">
+                        One of the most acclaimed green tea maufacturers, bringing superior quality tea to pamper your taste buds.     
+                      </p>
+                      <h4 class="card-title item-title text-center">{{item.title}}</h4>
+                      <p class="card-text text-center">{{item.description}}</p>
+                      {% if item.description2 %}
+                      <p class="card-text description">{{item.description2}}</p>
+                      {% endif %}
+                      <div class="price-list">
+                        {% if item.price %}
+                        <p class="price">
+                          {{item.price}}
                         </p>
-                        <h4 class="card-title item-title text-center">{{item.title}}</h4>
-                        <p class="card-text text-center">{{item.description}}</p>
-                        {% if item.description2 %}
-                        <p class="card-text description">{{item.description2}}</p>
                         {% endif %}
-                        <div class="price-list">
-                          {% if item.price %}
-                          <p class="price">
-                            {{item.price}}
-                          </p>
-                          {% endif %}
-                          {% if item["50g tin"] %}
-                          <p class="price">
-                            50g tin: {{item["50g tin"]}}
-                          </p>
-                          {% endif %}
-                          {% if item["100g tin"] %}
-                          <p class="price">
-                            100g tin: {{item["100g tin"]}}
-                          </p>
-                          {% endif %}
-                          {% if item["50g pouch"] %}
-                          <p class="price">
-                            50g pouch: {{item["50g pouch"]}}
-                          </p>
-                          {% endif %}
-                          {% if item["100g pouch"] %}
-                          <p class="price">
-                            100g pouch: {{item["100g pouch"]}}
-                          </p>
-                          {% endif %}         
-                          {% if item["1Kg pouch"] %}
-                          <p class="price">
-                            1kg pouch: {{item["1Kg pouch"]}}
-                          </p>
-                          {% endif %}
-                        </div>
+                        {% if item["50g tin"] %}
+                        <p class="price">
+                          50g tin: {{item["50g tin"]}}
+                        </p>
+                        {% endif %}
+                        {% if item["100g tin"] %}
+                        <p class="price">
+                          100g tin: {{item["100g tin"]}}
+                        </p>
+                        {% endif %}
+                        {% if item["50g pouch"] %}
+                        <p class="price">
+                          50g pouch: {{item["50g pouch"]}}
+                        </p>
+                        {% endif %}
+                        {% if item["100g pouch"] %}
+                        <p class="price">
+                          100g pouch: {{item["100g pouch"]}}
+                        </p>
+                        {% endif %}         
+                        {% if item["1Kg pouch"] %}
+                        <p class="price">
+                          1kg pouch: {{item["1Kg pouch"]}}
+                        </p>
+                        {% endif %}
                       </div>
                     </div>
                   </div>
                 </div>
+              </div>
           </div>
           {% endfor %}
       </div>

@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    df = pd.read_csv("data/tdt.csv", index_col=0)
+    df = pd.read_csv("data/tdt-new.csv", index_col=0)
     df = df.fillna(0)
     items = df.to_dict('records')
     return render_template('main.html', items=items)

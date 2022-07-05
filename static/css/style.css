@@ -58,3 +58,9 @@ body {
     margin-right: 120px;
     margin-bottom: 60px!important;
 }
+
+.product-code {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}

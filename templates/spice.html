@@ -16,66 +16,82 @@
         <div class="row mt-3">
             <div class="col-12">
               <div class="card mb-4">
-                  <div class="card-body header">
-                    <img class="weave-logo" src="/static/imgs/weaveskart-logo.png" alt="">
-                    <h4 class="card-title text-center header-title">Weaveskart</h4>
-                    <img src="/static/imgs/spice_bg.png" alt="" class="header-img">
-                    <p class="header-desc text-center">
-                      LAW India (looms & weaves) is a woman owned social enterprise, started in 2013.
-                      Our goal of ensuring safe food to the citizens of the country led us to start few initiatives for pesticide free and chemical free natural food. 
-                      We then slowly moved to organize organic and fair trade farmers from different parts of the country, especially women famers. 
-                      We envision a future where environmentally and socially responsible ethical business of organic and handcrafted products of excellence.
-                      To cater to the needs of the downtrodden by generating employment and adding value to the handcrafted wares created by rural women and the farming
-                       community
-                      To promote sustainable agriculture ground on permaculture
-                      To share a part of our profits to support the poor and marginalized people in the society. as well as for environmental sustainability.
-                      We offer world-class, ethically sourced, organic, natural and handcrafted products to the socially empowered customers.
-                      We put the health and wellbeing of our patrons or social investors as our first priority, striving to create a healthier India free from illnesses.
-                      We help small businesswomen earn a living, making them economically independent. 
-                      LAW, India promotes a permaculture based small socio- ecological system
-                    </p>
-                  </div>
+                <div class="card-body header">
+                  <img class="weave-logo" src="/static/imgs/weaveskart-logo.png" alt="">
+                  <h4 class="card-title text-center header-title">Weaveskart</h4>
+                  <img src="/static/imgs/spice_bg.png" alt="" class="header-img">
+                  <p class="header-desc text-center mt-5">
+                    LAW India (Looms & Weaves) is a woman owned social enterprise, started in 2013, with a goal of ensuring safe, natural food free of pesticides and chemicals to create a healthier society.   
+                    It organizes organic and fair trade farmers from different parts of the country, especially women famers, 
+                    with a vision to produce an environmentally and socially responsible, ethical business of organic and handcrafted products of excellence. In this way, it  generates employment to the down-trodden, making them economically independent.  
+                    It promotes sustainable agriculture by promoting permaculture-thereby not harming the eco-system-and also shares a part of its profits to support the poor and marginalized.
+                    LAW offers world-class, ethically sourced, organic, natural foods and spices as well as handcrafted products.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
           <div class="row mt-3">
             {% for item in items %}
             <div class="col-12">
-                <div class="card mb-4">
-                    <div class="row g-0">
-                      <div class="col-md-4">
-                        <img class="logo" src="/static/imgs/weaveskart-logo.png" alt="Logo">
-                        <p class="logo-text">Looms and Weaves</p>
-                        <img src="{{item.image}}" class="img-fluid rounded-start card-image" alt="{{item.title}}">
+              <div class="card mb-4">
+                <div class="row g-0">
+                  <div class="col-md-5">
+                    <img class="logo" src="/static/imgs/weaveskart-logo.png" alt="Logo">
+                    <p class="logo-text">Looms and Weaves</p>
+                    <img src="{{item.image}}" class="img-fluid rounded-start card-image" alt="{{item.title}}">
+                  </div>
+                  <div class="col-md-7">
+                    <div class="card-body">
+                      <p class="card-text heading">
+                        Empowering women farmers in rural India. Ethically sourced and organically produced.
+                      </p>
+                      <h6 class="card-title text-center item-title">{{item.title}}</h6>
+                      <p class="card-text text-center features">{{item.features}}</p>
+                      <div class="price-container">
+                        {% if item["50 G"] %}
+                          <span class="price-text">50G - {{item["50 G"]}}</span>
+                        {% endif %}
+                        {% if item["100 G"] %}
+                          <span class="price-text">100G - {{item["100 G"]}}</span>
+                        {% endif %}
+                        {% if item["150 G"] %}
+                          <span class="price-text">150G - {{item["150 G"]}}</span>
+                        {% endif %}
+                        {% if item["200 G"] %}
+                          <span class="price-text">200G - {{item["200 G"]}}</span>
+                        {% endif %}
+                        {% if item["250 G"] %}
+                          <span class="price-text">250G - {{item["250 G"]}}</span>
+                        {% endif %}
+                        {% if item["300 G"] %}
+                          <span class="price-text">300G - {{item["300 G"]}}</span>
+                        {% endif %}
+                        {% if item["400 G"] %}
+                          <span class="price-text">400G - {{item["400 G"]}}</span>
+                        {% endif %}
+                        {% if item["500 G"] %}
+                          <span class="price-text">500G - {{item["500 G"]}}</span>
+                        {% endif %}
+                        {% if item["600 G"] %}
+                          <span class="price-text">600G - {{item["600 G"]}}</span>
+                        {% endif %}
+                        {% if item["800 G"] %}
+                          <span class="price-text">800G - {{item["800 G"]}}</span>
+                        {% endif %}
+                        {% if item["1 Kg"] %}
+                          <span class="price-text">1KG - {{item["1 Kg"]}}</span>
+                        {% endif %}
+                        {% if item["weight"] %}
+                          <span class="price-text">{{item["weight"]}}</span>
+                        {% endif %}
                       </div>
-                      <div class="col-md-8">
-                        <div class="card-body">
-                          <p class="card-text heading">
-                            Empowering women farmers in rural india. Ethically sourced and organically produced.
-                          </p>
-                          <h6 class="card-title text-center item-title">{{item.title}}</h6>
-                          <p class="card-text text-center">{{item.features}}</p>
-                          <div class="price-container">
-                            {% if item["50"] %}
-                              <span class="price-text">50G-{{item["50"]}}</span>
-                            {% endif %}
-                            {% if item["100"] %}
-                              <span class="price-text">100G-{{item["100"]}}</span>
-                            {% endif %}
-                            {% if item["200"] %}
-                              <span class="price-text">200G-{{item["200"]}}</span>
-                            {% endif %}
-                            {% if item["250"] %}
-                              <span class="price-text">250G-{{item["250"]}}</span>
-                            {% endif %}
-                            {% if item["500"] %}
-                              <span class="price-text">500G-{{item["500"]}}</span>
-                            {% endif %}
-                          </div>
-                        </div>
-                      </div>
+                      <p class="nutrients">{{item.nutrients}}</p>
                     </div>
                   </div>
+                </div>
+                <p class="number">{{loop.index}}</p>
+              </div>
             </div>
             {% endfor %}
         </div>

@@ -31,7 +31,7 @@ def tata():
 
 @app.route("/weaveskart")
 def weavekart():
-    df = pd.read_csv("data/weaveskart-new.csv", index_col=0)
+    df = pd.read_csv("data/weaveskart.csv", index_col=0)
     df = df.fillna(0)
     items = df.to_dict('records')
     return render_template('spice.html', items=items)

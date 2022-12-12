@@ -45,8 +45,8 @@ def pride():
     return render_template("prideofindia.html", items=items)
 
 
-@app.route("/")
-def index():
+@app.route("/test")
+def test():
     return "Hello World!"
 
 

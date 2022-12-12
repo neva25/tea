@@ -1,6 +1,7 @@
-from flask import Flask, render_template
-import pandas as pd
+import os
 
+import pandas as pd
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
@@ -50,6 +51,7 @@ def test():
     return "Hello World!"
 
 
-if __name__ == "__main__":
-    app.run(debug=True, port=5001)
+port = int(os.environ.get("PORT", 33507))
+if __name__=="__main__":
+    app.run(debug=True, port=port)
 
